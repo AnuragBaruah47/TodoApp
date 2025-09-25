@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { TodoContextProvider } from "./Context/index";
 import TodoForm from "./Components/TodoForm";
-import TodoItem from "./Components/TodoItem";
+import TodoItems from "./Components/TodoItems";
 
 function App() {
   const [todos, settodos] = useState([]);
@@ -48,7 +48,7 @@ function App() {
           <div className="flex flex-wrap gap-y-3">
             {todos.map((value)=>(
               <div key={value.id} className="w-full">
-                <TodoItem todo={value}/>
+                <TodoItems todo={value}/>
               </div>
             ))}
           </div>
